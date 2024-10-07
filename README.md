@@ -1,5 +1,5 @@
 # django-base
-A simple Django base app
+The purpose of this repository is to provide the basic outline for creating a base for a Django app which can then be containerized. You can run Django using `venv` or containerizing it in Docker.
 
 ## Update System
 ```bash
