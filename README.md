@@ -38,14 +38,14 @@ sudo apt install python3.12-venv
 pip install virtualenv
 ```
 
-Create Virtual Environment with a `projectname` of your choice:
+Create Virtual Environment with a `venv_projectname` of your choice:
 ```bash
-python3 -m venv projectname
+python3 -m venv venv_projectname
 ```
 
 Change into the new directory:
 ```bash
-cd projectname
+cd venv_projectname
 ```
 
 Activate virtual environment:
@@ -72,16 +72,16 @@ Check Django Version installed:
 django-admin --version
 ```
 
-Create a Project (no hyphens). `projectname` is the name of your project.
+Create a Project (no hyphens). `django_projectname` is the name of your project.
 ```bash
-django-admin startproject projectname
+django-admin startproject django_projectname
 ```
 
 This will create some sort of output like the following:
 ```bash
-projectname  
+venv_projectname  
    manage.py  
-   projectname/  
+   django_projectname/  
        __init__.py  
        asgi.py  
        settings.py  
@@ -91,7 +91,7 @@ projectname
 
 Go into the new project directory
 ```bash
-cd projectname
+cd django_projectname
 ```
 
 Run the Development Server Locally to see if this works (use a port you're not currently using)
@@ -101,17 +101,17 @@ python manage.py runserver 0.0.0.0:8000
 
 If not running locally, update settings.py with allowed_hosts = [*] or add the IP of the server
 
-Create a Django App. `appname` is the name of your app.
+Create a Django App. `django_appname` is the name of your app.
 ```bash
-python manage.py startapp appname
+python manage.py startapp django_appname
 ```
 
 This will be the project structure now
 ```bash
-projectname  
+venv_projectname  
    manage.py
-   projectname/  
-   appname/
+   django_projectname/  
+   django_appname/
        migrations/  
            __init__.py  
        __init__.py  
@@ -137,7 +137,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'appname',
+    'django_appname',
     'requests',
     'rest_framework'
 ]
