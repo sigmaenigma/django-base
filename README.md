@@ -1,17 +1,8 @@
 # django-base
-The purpose of this repository is to provide the basic outline for creating a base for a Django app which can then be containerized. You can then run Django using `venv` or containerizing it in Docker.
+The purpose of this repository is to provide the basic outline for creating a base for a Django app which can then be containerized in another step/tutorial.
 
 ## Prerequisites
-- Docker
 - Python3
-
-## Cloning and using Docker-Compose (Preferred)
-Clone this repository and use Docker Compose to run the image.
-```bash
-git clone https://github.com/sigmaenigma/django-base.git
-cd django-base
-docker compose up -d
-```
 
 # Building Manually
 If you would like to build this all manually, follow the steps below.
