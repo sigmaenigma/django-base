@@ -3,11 +3,11 @@ import platform
 import subprocess
 
 def linux_installation(project_name):
-    os.system("sudo apt update")
-    os.system("sudo apt upgrade -y")
-    os.system("sudo apt install -y python3.12-venv")
-    os.system(f"python3 -m venv {project_name}")
-    os.system(f"source django-base/{project_name}/bin/activate")
+    subprocess.run(["sudo", "apt", "update"], check=True)
+    subprocess.run(["sudo", "apt", "upgrade", "-y"], check=True)
+    subprocess.run(["sudo", "apt", "install", "-y", "python3.12-venv"], check=True)
+    subprocess.run(["python3", "-m", "venv", project_name], check=True)
+    subprocess.run(["source", f"django-base/{project_name}/bin/activate"], shell=True, check=True)
 
 def windows_installation(project_name):
     subprocess.run(["pip", "install", "virtualenv"], check=True)
