@@ -7,7 +7,7 @@ def linux_installation(project_name):
     os.system("sudo apt upgrade -y")
     os.system("sudo apt install -y python3.12-venv")
     os.system(f"python3 -m venv {project_name}")
-    os.system(f"source /django-base/{project_name}/bin/activate")
+    os.system(f"source django-base/{project_name}/bin/activate")
 
 def windows_installation(project_name):
     subprocess.run(["pip", "install", "virtualenv"], check=True)
