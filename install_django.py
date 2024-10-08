@@ -3,11 +3,12 @@ import platform
 import subprocess
 
 def linux_installation(project_name):
+    print("Updating Linux")
     subprocess.run(["sudo", "apt", "update"], check=True)
     subprocess.run(["sudo", "apt", "upgrade", "-y"], check=True)
     subprocess.run(["sudo", "apt", "install", "-y", "python3.12-venv"], check=True)
     subprocess.run(["python3", "-m", "venv", project_name], check=True)
-    
+    print("Virtual Environment successfully created")
     # Create a shell script to activate the virtual environment
     activate_script = f"""
     #!/bin/bash
