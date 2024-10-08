@@ -15,7 +15,7 @@ curl -sSL https://raw.githubusercontent.com/sigmaenigma/django-base/refs/heads/m
 Clone this repository and use Docker Compose to run the image.
 ```bash
 git clone https://github.com/sigmaenigma/django-base.git
-cd django-base-project
+cd django-base
 docker compose up -d
 ```
 
