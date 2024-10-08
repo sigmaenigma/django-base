@@ -73,15 +73,20 @@ django-admin startproject django_projectname
 
 This will create some sort of output like the following:
 ```bash
-venv_projectname
-    django_projectname  
-    manage.py
-    django_projectname/  
-       __init__.py  
-       asgi.py  
-       settings.py  
-       urls.py  
-       wsgi.py
+.
+├── db.sqlite3
+├── django_projectname
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── settings.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   └── wsgi.cpython-312.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── manage.py
 ```
 
 Go into the new project directory
@@ -103,18 +108,29 @@ python manage.py startapp django_appname
 
 This will be the project structure now
 ```bash
-venv_projectname  
-   manage.py
-   django_projectname/  
-   django_appname/
-       migrations/  
-           __init__.py  
-       __init__.py  
-       admin.py  
-       apps.py  
-       models.py  
-       tests.py  
-       views.py
+.
+├── db.sqlite3
+├── django_appname
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── django_projectname
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── settings.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   └── wsgi.cpython-312.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── manage.py
 ```
 Create auth tables and super user
 ```bash
