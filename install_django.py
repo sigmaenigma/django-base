@@ -12,7 +12,7 @@ def linux_installation(project_name):
     # Create a shell script to activate the virtual environment
     activate_script = f"""
     #!/bin/bash
-    source django-base/{project_name}/bin/activate
+    source {project_name}/bin/activate
     """
     with open("activate_venv.sh", "w") as file:
         file.write(activate_script)
