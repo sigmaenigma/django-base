@@ -39,4 +39,4 @@ def main(project_name):
         macos_installation(project_name)
 
 if __name__ == '__main__':
-    main(project_name='test-project')
+    main(project_name='main-project')
