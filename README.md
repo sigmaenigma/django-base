@@ -73,9 +73,10 @@ django-admin startproject django_projectname
 
 This will create some sort of output like the following:
 ```bash
-venv_projectname  
-   manage.py  
-   django_projectname/  
+venv_projectname
+    django_projectname  
+    manage.py
+    django_projectname/  
        __init__.py  
        asgi.py  
        settings.py  
