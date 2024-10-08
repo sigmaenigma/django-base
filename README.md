@@ -3,8 +3,16 @@ The purpose of this repository is to provide the basic outline for creating a ba
 
 ## Prerequisites
 - Docker
+- Python3
 
-## Quick way of Getting Started
+# One-Step Automated Install (Experimental)
+For this procedure, you're going to simply run the following script and execute it.
+```bash
+curl -sSL https://raw.githubusercontent.com/sigmaenigma/django-base/refs/heads/main/install_django.py | python3
+```
+
+## Cloning and using Docker-Compose (Preferred)
+Clone this repository and use Docker Compose to run the image.
 ```bash
 git clone https://github.com/sigmaenigma/django-base.git
 cd django-base-project
@@ -12,6 +20,7 @@ docker compose up -d
 ```
 
 # Building Manually
+If you would like to build this all manually, follow the steps below.
 
 ## Update System (Linux)
 ```bash
