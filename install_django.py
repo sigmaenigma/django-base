@@ -7,7 +7,20 @@ def linux_installation(project_name):
     subprocess.run(["sudo", "apt", "upgrade", "-y"], check=True)
     subprocess.run(["sudo", "apt", "install", "-y", "python3.12-venv"], check=True)
     subprocess.run(["python3", "-m", "venv", project_name], check=True)
-    subprocess.run(["source", f"django-base/{project_name}/bin/activate"], shell=True, check=True)
+    
+    # Create a shell script to activate the virtual environment
+    activate_script = f"""
+    #!/bin/bash
+    source django-base/{project_name}/bin/activate
+    """
+    with open("activate_venv.sh", "w") as file:
+        file.write(activate_script)
+    
+    # Make the script executable
+    subprocess.run(["chmod", "+x", "activate_venv.sh"], check=True)
+    
+    # Run the script
+    subprocess.run(["./activate_venv.sh"], shell=True, check=True)
 
 def windows_installation(project_name):
     subprocess.run(["pip", "install", "virtualenv"], check=True)
