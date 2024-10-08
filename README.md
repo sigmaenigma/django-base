@@ -44,7 +44,7 @@ cd venv_projectname
 
 Activate virtual environment:
 ```bash
-source /bin/activate
+source bin/activate
 ```
 
 # Install Dependencies
