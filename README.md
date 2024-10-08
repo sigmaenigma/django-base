@@ -43,6 +43,11 @@ Create Virtual Environment
 python3 -m venv projectname
 ```
 
+Change into the new directory
+```bash
+cd projectname
+```
+
 Activate virtual environment
 ```bash
 source /bin/activate
@@ -62,12 +67,12 @@ requests==2.32.3
 pip install -r requirements.txt 
 ```
 
-Check Version
+Check Django Version installed
 ```bash
 django-admin --version
 ```
 
-Create a Project (no hyphens)
+Create a Project (no hyphens). `projectname` is the name of your app.
 ```bash
 django-admin startproject projectname
 ```
@@ -96,7 +101,7 @@ python manage.py runserver 0.0.0.0:8000
 
 If not running locally, update settings.py with allowed_hosts = [*] or add the IP of the server
 
-Create a Django App
+Create a Django App. `appname` is the name of your app.
 ```bash
 python manage.py startapp appname
 ```
