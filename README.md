@@ -56,7 +56,7 @@ djangorestframework==3.15.2
 Markdown==3.7
 requests==2.32.3
 ```
-
+Go ahead and install the above requirements.
 ```bash
 pip install -r requirements.txt 
 ```
