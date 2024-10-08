@@ -5,12 +5,6 @@ The purpose of this repository is to provide the basic outline for creating a ba
 - Docker
 - Python3
 
-# One-Step Automated Install (Experimental)
-For this procedure, you're going to simply run the following script and execute it in your CLI. This script automatically detects if it's in a Linux, Windows, MacOS (Darwin) system and attempts to download Django and create a project. The assumption is you have Python3 installed already as well as Docker to some capacity. I wouldn't use this method yet but I wanted it uploaded as I'm working on it.
-```bash
-curl -sSL https://raw.githubusercontent.com/sigmaenigma/django-base/refs/heads/main/install_django.py | python3
-```
-
 ## Cloning and using Docker-Compose (Preferred)
 Clone this repository and use Docker Compose to run the image.
 ```bash
