@@ -38,23 +38,23 @@ sudo apt install python3.12-venv
 pip install virtualenv
 ```
 
-Create Virtual Environment
+Create Virtual Environment with a `projectname` of your choice:
 ```bash
 python3 -m venv projectname
 ```
 
-Change into the new directory
+Change into the new directory:
 ```bash
 cd projectname
 ```
 
-Activate virtual environment
+Activate virtual environment:
 ```bash
 source /bin/activate
 ```
 
 # Install Dependencies
-## Contents of the `requirements.txt`
+## Contents of the `requirements.txt`:
 ```sh
 Django==5.1.1
 django-filter==24.3
@@ -67,17 +67,17 @@ requests==2.32.3
 pip install -r requirements.txt 
 ```
 
-Check Django Version installed
+Check Django Version installed:
 ```bash
 django-admin --version
 ```
 
-Create a Project (no hyphens). `projectname` is the name of your app.
+Create a Project (no hyphens). `projectname` is the name of your project.
 ```bash
 django-admin startproject projectname
 ```
 
-This will create some sort of output like the following
+This will create some sort of output like the following:
 ```bash
 projectname  
    manage.py  
