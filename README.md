@@ -6,7 +6,7 @@ The purpose of this repository is to provide the basic outline for creating a ba
 - Python3
 
 # One-Step Automated Install (Experimental)
-For this procedure, you're going to simply run the following script and execute it.
+For this procedure, you're going to simply run the following script and execute it in your CLI. This script automatically detects if it's in a Linux, Windows, MacOS (Darwin) system and attempts to download Django and create a project. I wouldn't use this method yet but I wanted it uploaded as I'm working on it.
 ```bash
 curl -sSL https://raw.githubusercontent.com/sigmaenigma/django-base/refs/heads/main/install_django.py | python3
 ```
