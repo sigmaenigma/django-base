@@ -39,7 +39,16 @@ Activate virtual environment
 source /bin/activate
 ```
 
-# Install Dependencies (Django is in the requirements.txt file)
+# Install Dependencies
+## Contents of the `requirements.txt`
+```sh
+Django==5.1.1
+django-filter==24.3
+djangorestframework==3.15.2
+Markdown==3.7
+requests==2.32.3
+```
+
 ```bash
 pip install -r requirements.txt 
 ```
