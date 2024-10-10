@@ -152,6 +152,15 @@ Create your user:
 ```bash
 python manage.py createsuperuser
 ```
+Output:
+```bash
+user@host:~//django_project/django_base$
+  Username (leave blank to use '<your username>'): 
+  Email address: 
+  Password: 
+  Password (again): 
+  Superuser created successfully.
+```
 
 Modify your `settings.py` file and add the name of your app (e.g. appname) and the `requests` and `rest_framework library`
 ```python
