@@ -47,6 +47,26 @@ djangorestframework==3.15.2
 Markdown==3.7
 requests==2.32.3
 ```
+
+# Project Dependencies
+
+This project uses the following Python packages:
+
+## Django==5.1.1
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Version 5.1.1 includes new features like the `querystring` template tag for easier URL parameter handling, PostgreSQL connection pools, and the `LoginRequiredMiddleware` for default authentication.
+
+## django-filter==24.3
+This package provides a reusable Django application for adding dynamic QuerySet filtering from URL parameters. It allows users to filter querysets based on user selections, making it easier to build complex search functionalities.
+
+## djangorestframework==3.15.2
+Django REST framework is a powerful and flexible toolkit for building Web APIs. It includes features like a web browsable API, authentication policies, and serialization that supports both ORM and non-ORM data sources.
+
+## Markdown==3.7
+This is a Python implementation of John Gruber's Markdown, a lightweight markup language for creating formatted text using a plain-text editor. It supports various extensions and is almost completely compliant with the reference implementation.
+
+## requests==2.32.3
+Requests is an elegant and simple HTTP library for Python, designed for human beings. It allows you to send HTTP/1.1 requests easily, with features like keep-alive, connection pooling, and automatic content decoding.
+
 Go ahead and install the above requirements.
 ```bash
 pip install -r requirements.txt 
