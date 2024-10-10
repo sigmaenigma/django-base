@@ -15,7 +15,7 @@ sudo apt upgrade
 
 ## Install Python `venv` package (Linux)
 ```bash
-sudo apt install python3.12-venv
+sudo apt install python3-venv
 ```
 
 ## Install Python `venv` package (Windows)
