@@ -154,7 +154,7 @@ python manage.py createsuperuser
 ```
 Output:
 ```bash
-user@host:~//django_project/django_base$
+user@host:~/django_project/django_base$
   Username (leave blank to use '<your username>'): 
   Email address: 
   Password: 
