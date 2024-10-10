@@ -62,7 +62,7 @@ Create a Project (no hyphens). `django_projectname` is the name of your project.
 django-admin startproject django_projectname
 ```
 
-This will create some sort of output like the following:
+This will create some sort of output like the following. You can view tree structures by running the `tree` command in your terminal.
 ```bash
 .
 ├── db.sqlite3
@@ -80,19 +80,19 @@ Go into the new project directory
 cd django_projectname
 ```
 
-Run the Development Server Locally to see if this works (use a port you're not currently using)
+Run the Development Server Locally to see if this works (use a port you're not currently using. I'm using port 8000 for my purposes)
 ```bash
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0:8000
 ```
 ![image](https://github.com/user-attachments/assets/e3dcc00b-8216-4422-add0-ce8e48444c93)
 
 
-Create a Django App. `django_appname` is the name of your app.
+Next, you'll need to create your first app. Replace `django_appname` with the name of your app.
 ```bash
 python manage.py startapp django_appname
 ```
 
-This will be the project structure now
+This will be the project structure now. 
 ```bash
 .
 ├── db.sqlite3
@@ -118,9 +118,38 @@ This will be the project structure now
 │   └── wsgi.py
 └── manage.py
 ```
-Create auth tables and super user
+Now that you have your project and first app creation out of the way, you'll want to authenticate and log into the built-in `/admin` panel Django provides. For this, we'll need to populate the `sqlite` database that was automatically created with the appropriate tables that are used on the backend to handle authentication. You'll run the `migrate` feature first and then you'll create a superuser using the `createsuperuser` command.
 ```bash
 python manage.py migrate
+```
+
+This will create an output like this:
+```bash
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+```
+
+Create your user:
+```bash
 python manage.py createsuperuser
 ```
 
@@ -145,4 +174,11 @@ Save and run the following:
 python manage.py runserver 0.0.0.0:8000
 ```
 
-Navigate to the hostname/ip address on port 8000. Navigate to <host-ip>:8000/admin and test a log in with the super user you just created.
+Navigate to `https://localhost:8000/admin` to log into Django with the username and password you created when you set up your superuser.
+
+![image](https://github.com/user-attachments/assets/adb8e280-09a3-4120-830a-e2207c666000)
+
+Once logged in, this is the dashboard you'll be able to register new tables to, create users, change passwords, and various other features you can navigate here: [Django Admin](https://docs.djangoproject.com/en/5.1/ref/contrib/admin/)
+![image](https://github.com/user-attachments/assets/452694d6-1137-44c5-bdab-139a08969fa5)
+
+Now that you have the app name registered, the `requests` and `rest_framework` packages integrated, you can start building an API!
