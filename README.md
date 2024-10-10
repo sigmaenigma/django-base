@@ -181,7 +181,7 @@ INSTALLED_APPS = [
 
 Save and run the following:
 ```bash
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0:8000
 ```
 
 Navigate to `https://localhost:8000/admin` to log into Django with the username and password you created when you set up your superuser.
@@ -191,4 +191,4 @@ Navigate to `https://localhost:8000/admin` to log into Django with the username 
 Once logged in, this is the dashboard you'll be able to register new tables to, create users, change passwords, and various other features you can navigate here: [Django Admin](https://docs.djangoproject.com/en/5.1/ref/contrib/admin/)
 ![image](https://github.com/user-attachments/assets/452694d6-1137-44c5-bdab-139a08969fa5)
 
-Now that you have the app name registered, the `requests` and `rest_framework` packages integrated, you can start building an API!
+Now that you have the app name registered, the `requests` and `rest_framework` packages integrated, you can start building an API (instructions coming soon)
