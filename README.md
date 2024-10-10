@@ -69,11 +69,6 @@ This will create some sort of output like the following:
 ├── django_projectname
 │   ├── asgi.py
 │   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-312.pyc
-│   │   ├── settings.cpython-312.pyc
-│   │   ├── urls.cpython-312.pyc
-│   │   └── wsgi.cpython-312.pyc
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
