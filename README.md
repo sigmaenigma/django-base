@@ -84,6 +84,7 @@ Run the Development Server Locally to see if this works (use a port you're not c
 ```bash
 python manage.py runserver 0:8000
 ```
+Navigate to `https://localhost:8000`:
 ![image](https://github.com/user-attachments/assets/e3dcc00b-8216-4422-add0-ce8e48444c93)
 
 
