@@ -53,19 +53,30 @@ requests==2.32.3
 This project uses the following Python packages:
 
 ## Django==5.1.1
-Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Version 5.1.1 includes new features like the `querystring` template tag for easier URL parameter handling, PostgreSQL connection pools, and the `LoginRequiredMiddleware` for default authentication.
+This is the actual Django package. Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Version 5.1.1 includes new features like the `querystring` template tag for easier URL parameter handling, PostgreSQL connection pools, and the `LoginRequiredMiddleware` for default authentication.
 
 ## django-filter==24.3
-This package provides a reusable Django application for adding dynamic QuerySet filtering from URL parameters. It allows users to filter querysets based on user selections, making it easier to build complex search functionalities.
+This package is used if you're needing to build out filters without using some crazy Python code. The package provides a reusable Django application for adding dynamic QuerySet filtering from URL parameters. It allows users to filter querysets based on user selections, making it easier to build complex search functionalities.
 
 ## djangorestframework==3.15.2
-Django REST framework is a powerful and flexible toolkit for building Web APIs. It includes features like a web browsable API, authentication policies, and serialization that supports both ORM and non-ORM data sources.
+The Django REST framework is what will make the Django app super powerful in that it provides you with the framework for the API backend. It's a powerful and flexible toolkit for actually building Web APIs. It includes features like:
+- A Web browsable API
+- Authentication policies
+- Serialization that supports both ORM and non-ORM data sources
 
 ## Markdown==3.7
 This is a Python implementation of John Gruber's Markdown, a lightweight markup language for creating formatted text using a plain-text editor. It supports various extensions and is almost completely compliant with the reference implementation.
 
 ## requests==2.32.3
-Requests is an elegant and simple HTTP library for Python, designed for human beings. It allows you to send HTTP/1.1 requests easily, with features like keep-alive, connection pooling, and automatic content decoding.
+Requests is an elegant and simple HTTP library for Python, designed for human beings. It allows you to send HTTP/1.1 requests easily, with features like keep-alive, connection pooling, and automatic content decoding. Something like the following can be done to easily pull data:
+
+```python
+import requests
+url = "https://github.com"
+response = requests.get(url)
+if response.status_code == 200:
+    print(response.text)
+```
 
 Go ahead and install the above requirements.
 ```bash
