@@ -1,5 +1,5 @@
 # django-base
-The purpose of this repository is to provide the basic outline for creating a Django app which can then be containerized in another step/tutorial (coming soon!!). This should at least get you started!! 
+The purpose of this repository is to provide the basic outline and necessary dependencies for creating a **Django API application** which can then be containerized in another step/tutorial (coming soon!!). This should at least get you started!! 
 
 ## Prerequisites
 - Python3
